@@ -38,7 +38,7 @@ While the band's playin'
 One of our old favorite songs from way back when
 So, golly, gee, fellas
 Have a little faith in me, fellas
-Dolly, never go away
+Dolly, as never go away
 Promise, you'll never go away
 Dolly'll never go away again";
 

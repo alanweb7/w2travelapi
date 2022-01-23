@@ -1,0 +1,120 @@
+<?php
+
+/**
+ * The public-facing functionality of the plugin.
+ *
+ * @link       https://aconline.com.br
+ * @since      1.0.0
+ *
+ * @package    topapostas-url-parameters
+ * @subpackage Library_Functions_Mega/public
+ */
+
+/**
+ * The public-facing functionality of the plugin.
+ *
+ * Defines the plugin name, version, and two examples hooks for how to
+ * enqueue the public-facing stylesheet and JavaScript.
+ *
+ * @package    Library_Functions_Mega
+ * @subpackage Library_Functions_Mega/public
+ * @author     Alan Silva <alanweb7@gmail.com>
+ */
+class Library_Top_Apostas_Public {
+
+	/**
+	 * The ID of this plugin.
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 * @var      string    $plugin_name    The ID of this plugin.
+	 */
+	private $plugin_name;
+
+	/**
+	 * The version of this plugin.
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 * @var      string    $version    The current version of this plugin.
+	 */
+	private $version;
+
+	/**
+	 * Initialize the class and set its properties.
+	 *
+	 * @since    1.0.0
+	 * @param      string    $plugin_name       The name of the plugin.
+	 * @param      string    $version    The version of this plugin.
+	 */
+	public function __construct() {
+
+
+		$this->plugin_name = "topapostas-url-parameters";
+		$this->version = "1.0.7";
+
+	}
+
+	/**
+	 * Register the stylesheets for the public-facing side of the site.
+	 *
+	 * @since    1.0.0
+	 */
+	public function enqueue_styles() {
+
+		/**
+		 * This function is provided for demonstration purposes only.
+		 *
+		 * An instance of this class should be passed to the run() function
+		 * defined in Library_Functions_Mega_Loader as all of the hooks are defined
+		 * in that particular class.
+		 *
+		 * The Library_Functions_Mega_Loader will then create the relationship
+		 * between the defined hooks and the functions defined in this
+		 * class.
+		 */
+
+// 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/library-functions-mega-public.css', array(), $this->version, 'all' );
+
+	}
+
+	/**
+	 * Register the JavaScript for the public-facing side of the site.
+	 *
+	 * @since    1.0.0
+	 */
+	public function enqueue_scripts() {
+
+		/**
+		 * This function is provided for demonstration purposes only.
+		 *
+		 * An instance of this class should be passed to the run() function
+		 * defined in Library_Functions_Mega_Loader as all of the hooks are defined
+		 * in that particular class.
+		 *
+		 * The Library_Functions_Mega_Loader will then create the relationship
+		 * between the defined hooks and the functions defined in this
+		 * class.
+		 */
+
+		 $pages = array(4426, 4323, "top-10-cassinos", "top10");
+		 $get_param = $_GET["parameters"];
+		 
+
+			 wp_enqueue_script( $this->plugin_name."-general-script", plugin_dir_url( __FILE__ ) . 'js/library-top-apostas-public.js', array( 'jquery' ), '1.23.45', false );
+		 
+			
+
+	}
+	
+	
+	public function run(){
+	    
+	    $this->enqueue_scripts();
+	    
+	}
+
+
+
+}
+
